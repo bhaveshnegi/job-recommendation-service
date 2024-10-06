@@ -1,6 +1,6 @@
 # job-recommendation-service
 
-1\. Project Setup
+1. Project Setup
 
 First, set up a basic Node.js project:
 
@@ -14,13 +14,13 @@ Install the necessary dependencies:
 
 npm install express mongoose 
 
-2\. Set Up Express Server
+2. Set Up Express Server
 
 Create a simple Express server to handle API requests:
 
 server.js
 
-3\. Database Models
+3. Database Models
 
 Define User and Job models using Mongoose.
 
@@ -28,7 +28,7 @@ models/User.js
 
 models/Job.js
 
-4\. RESTful API Endpoints
+4. RESTful API Endpoints
 
 Add a user profile to the database.
 
@@ -42,11 +42,11 @@ routes/jobs.js
 
 routes/users.js
 
-5\. Integrate Routes into the Server
+5. Integrate Routes into the Server
 
 In server.js, import the routes and use them
 
-6\. Test with Sample Data
+6. Test with Sample Data
 
 For testing purposes, you can use Postman or curl to add job postings and user profiles, and then request job recommendations.
 
@@ -56,31 +56,31 @@ Add User (POST to /api/users/add)
 
 Get Job Recommendations (POST to /api/users/recommend)
 
-7\. Error Handling and Testing
+7. Error Handling and Testing
 
 Make sure to add error handling for bad requests, database issues, etc.
 
-\## Setup Instructions
+## Setup Instructions
 
-\### Prerequisites
+### Prerequisites
 
-\- \[Node.js\](https://nodejs.org/) (v12.x or higher)
+- \[Node.js\](https://nodejs.org/) (v12.x or higher)
 
-\- \[MongoDB\](https://www.mongodb.com/) (either locally or a cloud service like MongoDB Atlas)
+- \[MongoDB\](https://www.mongodb.com/) (either locally or a cloud service like MongoDB Atlas)
 
-\### 1. Clone the Repository
+### 1. Clone the Repository
 
-\`\`\`bash
+
 
 git clone https://github.com/bhaveshnegi/job-recommendation-service.git
 
 cd job-recommendation-service
 
-2\. Install Dependencies
+2. Install Dependencies
 
 npm install
 
-3\. Set Up MongoDB
+3. Set Up MongoDB
 
 If using MongoDB Atlas, create a cluster and obtain the connection string.
 
@@ -88,7 +88,7 @@ Replace the MongoDB connection string in server.js with your own:
 
 mongoose.connect('your\_mongodb\_connection\_string', { useNewUrlParser: true, useUnifiedTopology: true });
 
-4\. Start the Server
+4. Start the Server
 
 npm start
 
