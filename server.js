@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const moongoose = require("mongoose");
+const jobRoutes = require('./routes/job');
 
 const app = express();
 
@@ -12,7 +13,9 @@ app.get('/', (req, res) => {
     res.send('Job Recommendation Service is running!');
 });
 
+app.use('/api/jobs', jobRoutes);
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running on port http://localhost:${PORT}`);
 });
