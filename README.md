@@ -4,21 +4,21 @@
 
 - First, set up a basic Node.js project:
 
-Create a new directory for the project.
+- Create a new directory for the project.
 
-Run the following commands to initialize a Node.js project:
+- Run the following commands to initialize a Node.js project:
 
-npm init -y
+- - npm init -y
 
-Install the necessary dependencies:
+- Install the necessary dependencies:
 
-npm install express mongoose 
+- npm install express mongoose 
 
 ## 2. Set Up Express Server
 
-Create a simple Express server to handle API requests:
+- Create a simple Express server to handle API requests:
 
-server.js
+- - server.js
 
 ## 3. Database Models
 
