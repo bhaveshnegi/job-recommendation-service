@@ -6,9 +6,7 @@
 
 - Create a new directory for the project.
 
-- Run the following commands to initialize a Node.js project:
-
-- - npm init -y
+- Run the following commands to initialize a Node.js project: npm init -y
 
 - Install the necessary dependencies:
 
@@ -16,49 +14,42 @@
 
 ## 2. Set Up Express Server
 
-- Create a simple Express server to handle API requests:
-
-- - server.js
+- Create a simple Express server to handle API requests: server.js
 
 ## 3. Database Models
 
-Define User and Job models using Mongoose.
-
-models/User.js
-
-models/Job.js
+- Define User and Job models using Mongoose.
+    - models/User.js
+    models/Job.js
 
 ## 4. RESTful API Endpoints
 
-Add a user profile to the database.
+- Add a user profile to the database.
 
-Add job postings to the database.
+- Add job postings to the database.
 
-Get recommended jobs based on user profile.
-
-Create Routes
-
-routes/jobs.js
-
-routes/users.js
+- Get recommended jobs based on user profile.
+    - Create Routes
+    - routes/jobs.js
+    - routes/users.js
 
 ## 5. Integrate Routes into the Server
 
-In server.js, import the routes and use them
+- In server.js, import the routes and use them
 
 ## 6. Test with Sample Data
 
-For testing purposes, you can use Postman or curl to add job postings and user profiles, and then request job recommendations.
+- For testing purposes, you can use Postman or curl to add job postings and user profiles, and then request job recommendations.
 
-Add Job (POST to /api/jobs/add)
+- Add Job (POST to /api/jobs/add)
 
-Add User (POST to /api/users/add)
+- Add User (POST to /api/users/add)
 
-Get Job Recommendations (POST to /api/users/recommend)
+- Get Job Recommendations (POST to /api/users/recommend)
 
 ## 7. Error Handling and Testing
 
-Make sure to add error handling for bad requests, database issues, etc.
+- Make sure to add error handling for bad requests, database issues, etc.
 
 ## Setup Instructions
 
@@ -70,106 +61,77 @@ Make sure to add error handling for bad requests, database issues, etc.
 
 ## 1. Clone the Repository
 
+- git clone https://github.com/bhaveshnegi/job-recommendation-service.git
 
-
-git clone https://github.com/bhaveshnegi/job-recommendation-service.git
-
-cd job-recommendation-service
+- cd job-recommendation-service
 
 ## 2. Install Dependencies
 
-npm install
+- npm install
 
 ## 3. Set Up MongoDB
 
-If using MongoDB Atlas, create a cluster and obtain the connection string.
+- If using MongoDB Atlas, create a cluster and obtain the connection string.
 
-Replace the MongoDB connection string in server.js with your own:
+- Replace the MongoDB connection string in server.js with your own:
 
-mongoose.connect('your\_mongodb\_connection\_string', { useNewUrlParser: true, useUnifiedTopology: true });
+- mongoose.connect('your\_mongodb\_connection\_string', { useNewUrlParser: true, useUnifiedTopology: true });
 
 ## 4. Start the Server
 
-npm start
+- npm start
 
-The server will run on http://localhost:3000.
+- The server will run on http://localhost:3000.
 
-API Endpoints
+- API Endpoints
 
-User Endpoints
+- User Endpoints
 
-Add User Profile
+- Add User Profile
 
-Endpoint: POST /api/users/add
+- Endpoint: POST /api/users/add
 
-Request Body:
+- Request Body:
+    - {"name": "Alice Johnson",
+    "skills": \["JavaScript", "React", "Node.js"\],
+    "experience\_level": "Intermediate",
+    "preferences": {
+        "desired\_roles": \["Frontend Developer"\],
+        "locations": \["Remote", "Austin"\],
+        "job\_type": "Full-Time"
+        }
+    }
 
-{
 
-"name": "Alice Johnson",
+- Get Job Recommendations
 
-"skills": \["JavaScript", "React", "Node.js"\],
+- Endpoint: POST /api/users/recommend
 
-"experience\_level": "Intermediate",
+- Request Body:
+    - {"skills": \["JavaScript", "React"\],
+    "experience\_level": "Intermediate",
+    "preferences": {
+        "locations": \["Remote", "Austin"\],
+        "job\_type": "Full-Time"
+        }
+    }
 
-"preferences": {
+- Job Endpoints
 
-"desired\_roles": \["Frontend Developer"\],
+- Add Job Posting
 
-"locations": \["Remote", "Austin"\],
+- Endpoint: POST /api/jobs/add
 
-"job\_type": "Full-Time"
+- Request Body:
+    - {"job\_title": "Frontend Developer",
+    "company": "Tech Innovations",
+    "required\_skills": \["JavaScript", "React"\],
+    "location": "Remote",
+    "job\_type": "Full-Time",
+    "experience\_level": "Intermediate"
+    }
 
-}
 
-}
+- Get All Jobs
 
-Get Job Recommendations
-
-Endpoint: POST /api/users/recommend
-
-Request Body:
-
-{
-
-"skills": \["JavaScript", "React"\],
-
-"experience\_level": "Intermediate",
-
-"preferences": {
-
-"locations": \["Remote", "Austin"\],
-
-"job\_type": "Full-Time"
-
-}
-
-}
-
-Job Endpoints
-
-Add Job Posting
-
-Endpoint: POST /api/jobs/add
-
-Request Body:
-
-{
-
-"job\_title": "Frontend Developer",
-
-"company": "Tech Innovations",
-
-"required\_skills": \["JavaScript", "React"\],
-
-"location": "Remote",
-
-"job\_type": "Full-Time",
-
-"experience\_level": "Intermediate"
-
-}
-
-Get All Jobs
-
-Endpoint: GET /api/jobs/all
+- Endpoint: GET /api/jobs/all
