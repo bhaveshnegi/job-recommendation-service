@@ -84,7 +84,7 @@ Make sure to add error handling for bad requests, database issues, etc.
 
 \`\`\`bash
 
-git clone https://github.com/yourusername/job-recommendation-service.git
+git clone https://github.com/bhaveshnegi/job-recommendation-service.git
 
 cd job-recommendation-service
 
@@ -97,86 +97,6 @@ npm install
 If using MongoDB Atlas, create a cluster and obtain the connection string.
 
 Replace the MongoDB connection string in server.js with your own:
-
-mongoose.connect('your\_mongodb\_connection\_string', { useNewUrlParser: true, useUnifiedTopology: true });
-
-Here’s a sample README.md file for your Job Recommendation Backend Service project. This document provides setup instructions and additional information about the project.
-
-markdown
-
-Copy code
-
-\# Job Recommendation Backend Service
-
-This is a Node.js application that provides a backend service for recommending jobs based on user profiles. It allows users to create profiles, add job postings, and retrieve job recommendations based on their skills, experience, and preferences.
-
-\## Table of Contents
-
-\- \[Features\](#features)
-
-\- \[Technologies\](#technologies)
-
-\- \[Setup Instructions\](#setup-instructions)
-
-\- \[API Endpoints\](#api-endpoints)
-
-\- \[Usage\](#usage)
-
-\- \[Contributing\](#contributing)
-
-\- \[License\](#license)
-
-\## Features
-
-\- Create and manage user profiles.
-
-\- Add job postings.
-
-\- Retrieve job recommendations based on user skills and preferences.
-
-\## Technologies
-
-\- Node.js
-
-\- Express.js
-
-\- MongoDB (with Mongoose)
-
-\- Body-parser (optional, if using Express.js version < 4.16)
-
-\## Setup Instructions
-
-\### Prerequisites
-
-\- \[Node.js\](https://nodejs.org/) (v12.x or higher)
-
-\- \[MongoDB\](https://www.mongodb.com/) (either locally or a cloud service like MongoDB Atlas)
-
-\### 1. Clone the Repository
-
-\`\`\`bash
-
-git clone https://github.com/yourusername/job-recommendation-service.git
-
-cd job-recommendation-service
-
-2\. Install Dependencies
-
-bash
-
-Copy code
-
-npm install
-
-3\. Set Up MongoDB
-
-If using MongoDB Atlas, create a cluster and obtain the connection string.
-
-Replace the MongoDB connection string in server.js with your own:
-
-javascript
-
-Copy code
 
 mongoose.connect('your\_mongodb\_connection\_string', { useNewUrlParser: true, useUnifiedTopology: true });
 
