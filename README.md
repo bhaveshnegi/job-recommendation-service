@@ -8,23 +8,11 @@ Create a new directory for the project.
 
 Run the following commands to initialize a Node.js project:
 
-bash
-
-Copy code
-
-mkdir job-recommendation-service
-
-cd job-recommendation-service
-
 npm init -y
 
 Install the necessary dependencies:
 
-bash
-
-Copy code
-
-npm install express mongoose body-parser
+npm install express mongoose 
 
 2\. Set Up Express Server
 
